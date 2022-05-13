@@ -7,17 +7,21 @@ c.c文件没什么用，只是为了和b.c一起打包为静态库。
 
 ## 可行
 
+```
 gcc -c main.c -o main.o &&\
 gcc -c b.c -o b.o &&\
 gcc -c c.c -o c.o &&\
 gcc -Wl,-Tx.ld main.o b.o c.o -o main &&\
 ./main
+```
 
 ## 不可行
 
+```
 gcc -c main.c -o main.o &&\
 gcc -c b.c -o b.o &&\
 gcc -c c.c -o c.o &&\
 ar ar rcs libxx.a b.o c.o &&\
 gcc -Wl,-Tx.ld main.o libxx.a -o main &&\
 ./main
+```
