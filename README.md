@@ -21,7 +21,7 @@ gcc -Wl,-Tx.ld main.o b.o c.o -o main &&\
 gcc -c main.c -o main.o &&\
 gcc -c b.c -o b.o &&\
 gcc -c c.c -o c.o &&\
-ar ar rcs libxx.a b.o c.o &&\
+ar rcs libxx.a b.o c.o &&\
 gcc -Wl,-Tx.ld main.o libxx.a -o main &&\
 ./main
 ```
