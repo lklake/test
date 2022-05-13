@@ -1,5 +1,5 @@
 #include <stdio.h>
-__attribute__((section(".haha"))) int b(){
+int b(){
     printf("b included\n");
     return 0;
 }
